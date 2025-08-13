@@ -19,12 +19,13 @@ depends=(
     linux-headers
     lvm2
     mtools
-    nano
+    neovim
     networkmanager
     openssh
     reflector
     sudo
     ttf-liberation
+    ttf-jetbrains-mono-nerd
     ufw
     unzip
     viewnior
