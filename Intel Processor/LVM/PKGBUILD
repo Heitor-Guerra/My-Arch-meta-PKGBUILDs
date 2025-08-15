@@ -29,6 +29,7 @@ depends=(
     ufw
     unzip
     viewnior
+    wl-clipboard
     yazi
     zip
 )
