@@ -15,13 +15,13 @@ Install it with pacman -U:
 
 Or just use pacman -U with curl(Direct Install)
 
-    pacman -U --nosignature https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/<CPU>/my-arch-metapkg-1.0-1-any.pkg.tar.zst
+    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/<CPU>/my-arch-metapkg-1.0-1-any.pkg.tar.zst
 
 # Examples:
 AMD CPU (LVM):
 
-    pacman -U --nosignature https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/AMD-LVM/my-arch-metapkg-1.0-1-any.pkg.tar.zst
+    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/AMD-LVM/my-arch-metapkg-1.0-1-any.pkg.tar.zst
     
 AMD CPU (NON-LVM):
 
-    pacman -U --nosignature https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/AMD/my-arch-metapkg-1.0-1-any.pkg.tar.zst
+    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/AMD/my-arch-metapkg-1.0-1-any.pkg.tar.zst
