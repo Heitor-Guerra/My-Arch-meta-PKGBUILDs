@@ -14,6 +14,11 @@ Install it with pacman -U:
     pacman -U my-arch-metapkg-1.0-1-any.pkg.tar.zst
 
 Or just use pacman -U with curl(Direct Install)
+    OBS: if you want to use this, you have to TEMPORARILY disable signature verification
+    To do this, use the command below and uncheck RemoteFileSignLevel and put it to "Optional"
+
+        nvim /etc/pacman.conf
+
 
     pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/<CPU>/my-arch-metapkg-1.0-1-any.pkg.tar.zst
 
