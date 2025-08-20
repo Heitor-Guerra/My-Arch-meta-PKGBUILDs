@@ -1,0 +1,41 @@
+pkgname=my-arch-metapkg
+pkgver=1.0
+pkgrel=1
+pkgdesc="Meta-package for my Arch Linux setup. AMD CPU, lvm"
+arch=('any')
+depends=(
+    amd-ucode
+    base
+    base-devel
+    dosfstools
+    efibootmgr
+    fastfetch
+    foot
+    git
+    htop
+    inetutils
+    linux
+    linux-firmware
+    linux-headers
+    mtools
+    neovim
+    networkmanager
+    openssh
+    plasma-meta
+    reflector
+    sudo
+    ttf-liberation
+    ttf-jetbrains-mono-nerd
+    ufw
+    unzip
+    viewnior
+    wl-clipboard    
+    yazi
+    zip
+)
+url="https://github.com/Heitor-Guerra"
+license=('GPL')
+
+package() {
+    echo "Meta-package installed."
+}

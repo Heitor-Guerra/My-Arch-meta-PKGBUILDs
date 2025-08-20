@@ -6,7 +6,7 @@ xdata = pkgtype=pkg
 pkgver = 1.0-1
 pkgdesc = Meta-package for my Arch Linux setup. AMD CPU, lvm
 url = https://github.com/Heitor-Guerra
-builddate = 1755103664
+builddate = 1755348179
 packager = Unknown Packager
 size = 0
 arch = any
@@ -35,5 +35,6 @@ depend = ttf-jetbrains-mono-nerd
 depend = ufw
 depend = unzip
 depend = viewnior
+depend = wl-clipboard
 depend = yazi
 depend = zip
