@@ -24,6 +24,7 @@ depends=(
     plasma-meta
     reflector
     sudo
+    tinyproxy
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw

@@ -24,6 +24,7 @@ depends=(
     openssh
     reflector
     sudo
+    tinyproxy
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
