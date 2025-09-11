@@ -9,6 +9,7 @@ depends=(
     dosfstools
     efibootmgr
     fastfetch
+    flatpak
     foot
     git
     htop
