@@ -15,6 +15,7 @@ depends=(
     git
     htop
     inetutils
+    kdeconnect
     linux
     linux-firmware
     linux-headers
