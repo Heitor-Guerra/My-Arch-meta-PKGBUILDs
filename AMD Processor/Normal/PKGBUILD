@@ -21,6 +21,7 @@ depends=(
     neovim
     networkmanager
     openssh
+    python-pip
     reflector
     sudo
     tinyproxy

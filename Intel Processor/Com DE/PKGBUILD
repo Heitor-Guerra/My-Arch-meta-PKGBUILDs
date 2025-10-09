@@ -24,6 +24,7 @@ depends=(
     networkmanager
     openssh
     plasma-meta
+    python-pip
     reflector
     sudo
     tinyproxy
