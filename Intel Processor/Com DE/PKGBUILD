@@ -13,7 +13,7 @@ depends=(
     flatpak
     foot
     git
-    godot
+    godot-mono
     htop
     inetutils
     intel-ucode
