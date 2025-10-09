@@ -10,6 +10,7 @@ depends=(
     dosfstools
     efibootmgr
     fastfetch
+    firefox
     flatpak
     foot
     git
@@ -18,6 +19,7 @@ depends=(
     inetutils
     intel-ucode
     kdeconnect
+    libreoffice-fresh
     linux
     linux-firmware
     linux-headers
@@ -28,6 +30,7 @@ depends=(
     plasma-meta
     python-pip
     reflector
+    steam
     sudo
     tinyproxy
     ttf-liberation
