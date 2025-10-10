@@ -15,7 +15,6 @@ depends=(
     flatpak
     foot
     git
-    godot-mono
     htop
     inetutils
     kdeconnect
