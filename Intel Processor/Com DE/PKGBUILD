@@ -28,6 +28,7 @@ depends=(
     openssh
     plasma-meta
     python-pip
+    r
     reflector
     steam
     sudo

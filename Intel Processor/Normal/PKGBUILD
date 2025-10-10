@@ -4,6 +4,7 @@ pkgrel=1
 pkgdesc="Meta-package for my Arch Linux setup. Intel CPU, lvm"
 arch=('any')
 depends=(
+    arduino-cli
     base
     base-devel
     dosfstools
@@ -22,6 +23,7 @@ depends=(
     networkmanager
     openssh
     python-pip
+    r
     reflector
     sudo
     tinyproxy
