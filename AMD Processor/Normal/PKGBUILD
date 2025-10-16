@@ -5,7 +5,6 @@ pkgdesc="Meta-package for my Arch Linux setup. AMD CPU, lvm"
 arch=('any')
 depends=(
     amd-ucode
-    arduino-cli
     base
     base-devel
     dosfstools
