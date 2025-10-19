@@ -29,6 +29,7 @@ depends=(
     python-pip
     r
     reflector
+    rustup
     sudo
     steam
     tinyproxy
