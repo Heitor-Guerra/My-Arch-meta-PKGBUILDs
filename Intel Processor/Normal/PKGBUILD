@@ -8,7 +8,6 @@ depends=(
     base-devel
     dosfstools
     efibootmgr
-    fastfetch
     foot
     git
     htop
@@ -16,7 +15,6 @@ depends=(
     intel-ucode
     linux
     linux-firmware
-    linux-headers
     mtools
     neovim
     networkmanager
@@ -25,17 +23,14 @@ depends=(
     r
     reflector
     rustup
-    sudo
     tinyproxy
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    unzip
     viewnior
     vlc
     wl-clipboard
     yazi
-    zip
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
