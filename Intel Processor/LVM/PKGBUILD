@@ -24,7 +24,6 @@ depends=(
     r
     reflector
     rustup
-    tinyproxy
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw

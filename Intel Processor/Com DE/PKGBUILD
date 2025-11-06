@@ -28,7 +28,6 @@ depends=(
     reflector
     rustup
     steam
-    tinyproxy
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
