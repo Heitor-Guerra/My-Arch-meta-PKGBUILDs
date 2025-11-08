@@ -13,6 +13,7 @@ depends=(
     git
     htop
     inetutils
+    julia
     linux
     linux-firmware
     lvm2
@@ -23,7 +24,6 @@ depends=(
     python-pip
     r
     reflector
-    rustup
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw

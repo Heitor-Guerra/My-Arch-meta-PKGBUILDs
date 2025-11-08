@@ -15,6 +15,7 @@ depends=(
     htop
     inetutils
     intel-ucode
+    julia
     libreoffice-fresh
     linux
     linux-firmware
@@ -26,7 +27,6 @@ depends=(
     python-pip
     r
     reflector
-    rustup
     steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
