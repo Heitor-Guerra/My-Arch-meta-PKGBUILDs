@@ -25,16 +25,17 @@ depends=(
     openssh
     plasma-meta
     python-pip
-    r
     reflector
     steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
+    unzip
     viewnior
     vlc
     wl-clipboard    
     yazi
+    zip
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')

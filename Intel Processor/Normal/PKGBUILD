@@ -21,15 +21,16 @@ depends=(
     networkmanager
     openssh
     python-pip
-    r
     reflector
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
+    unzip
     viewnior
     vlc
     wl-clipboard
     yazi
+    zip
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
