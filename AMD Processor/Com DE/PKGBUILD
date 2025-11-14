@@ -10,7 +10,6 @@ depends=(
     dosfstools
     efibootmgr
     firefox
-    flatpak
     foot
     git
     htop
