@@ -22,7 +22,6 @@ depends=(
     neovim
     networkmanager
     openssh
-    plasma-meta
     python-pip
     reflector
     steam
@@ -35,6 +34,23 @@ depends=(
     wl-clipboard
     yazi
     zip
+
+    bluedevil
+    breeze-gtk
+    drkonqi
+    kde-gtk-config
+    kdeplasma-addons
+    kscreen
+    ksshaskpass
+    kwrited
+    plasma-desktop
+    plasma-nm
+    plasma-pa
+    plasma-thunderbolt
+    plasma-workspace-wallpapers
+    sddm-kcm
+    spectacle
+    xdg-desktop-portal-kde
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
