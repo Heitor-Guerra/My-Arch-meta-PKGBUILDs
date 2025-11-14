@@ -11,6 +11,7 @@ depends=(
     efibootmgr
     firefox
     foot
+    gdb
     git
     htop
     inetutils
@@ -37,11 +38,8 @@ depends=(
 
     bluedevil
     breeze-gtk
-    drkonqi
     kde-gtk-config
-    kdeplasma-addons
     kscreen
-    ksshaskpass
     kwrited
     plasma-desktop
     plasma-nm
