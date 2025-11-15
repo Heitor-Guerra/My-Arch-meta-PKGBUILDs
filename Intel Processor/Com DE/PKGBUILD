@@ -26,12 +26,10 @@ depends=(
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    unzip
     viewnior
     vlc
     wl-clipboard
     yazi
-    zip
 
     bluedevil
     breeze-gtk
