@@ -11,14 +11,12 @@ depends=(
     foot
     git
     htop
-    inetutils
     intel-ucode
     julia
     libreoffice-fresh
     linux
     linux-firmware
     neovim
-    networkmanager
     openssh
     phototonic
     python-pip
@@ -38,7 +36,6 @@ depends=(
     plasma-pa
     sddm-kcm
     spectacle
-    xdg-desktop-portal-kde
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')

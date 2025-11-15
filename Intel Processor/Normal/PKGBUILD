@@ -10,7 +10,6 @@ depends=(
     foot
     git
     htop
-    inetutils
     intel-ucode
     julia
     linux
