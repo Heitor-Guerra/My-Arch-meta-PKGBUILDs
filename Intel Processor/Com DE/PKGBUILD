@@ -32,13 +32,10 @@ depends=(
     yazi
 
     bluedevil
-    breeze-gtk
-    kde-gtk-config
     kscreen
     plasma-desktop
     plasma-nm
     plasma-pa
-    plasma-workspace-wallpapers
     sddm-kcm
     spectacle
     xdg-desktop-portal-kde
