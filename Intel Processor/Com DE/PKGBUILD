@@ -10,7 +10,6 @@ depends=(
     efibootmgr
     firefox
     foot
-    gdb
     git
     htop
     inetutils
@@ -44,7 +43,6 @@ depends=(
     plasma-desktop
     plasma-nm
     plasma-pa
-    plasma-thunderbolt
     plasma-workspace-wallpapers
     sddm-kcm
     spectacle
