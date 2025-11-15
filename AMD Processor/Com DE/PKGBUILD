@@ -7,7 +7,6 @@ depends=(
     amd-ucode
     base
     base-devel
-    dosfstools
     efibootmgr
     firefox
     foot
@@ -18,7 +17,6 @@ depends=(
     libreoffice-fresh
     linux
     linux-firmware
-    mtools
     neovim
     networkmanager
     openssh
@@ -39,7 +37,6 @@ depends=(
     breeze-gtk
     kde-gtk-config
     kscreen
-    kwrited
     plasma-desktop
     plasma-nm
     plasma-pa

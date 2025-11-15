@@ -6,7 +6,6 @@ arch=('any')
 depends=(
     base
     base-devel
-    dosfstools
     efibootmgr
     foot
     git
@@ -16,7 +15,6 @@ depends=(
     julia
     linux
     linux-firmware
-    mtools
     neovim
     networkmanager
     openssh
