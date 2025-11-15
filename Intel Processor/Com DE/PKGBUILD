@@ -20,13 +20,13 @@ depends=(
     neovim
     networkmanager
     openssh
+    phototonic
     python-pip
     reflector
     steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    viewnior
     vlc
     wl-clipboard
     yazi
