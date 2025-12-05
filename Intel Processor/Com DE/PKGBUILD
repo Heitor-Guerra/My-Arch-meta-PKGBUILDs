@@ -14,7 +14,7 @@ depends=(
     intel-ucode
     julia
     libreoffice-fresh
-    linux
+    linux-lts 
     linux-firmware
     neovim
     openssh

@@ -12,7 +12,7 @@ depends=(
     git
     htop
     julia
-    linux
+    linux-lts
     linux-firmware
     lvm2
     neovim

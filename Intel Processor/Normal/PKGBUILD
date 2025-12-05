@@ -12,7 +12,7 @@ depends=(
     htop
     intel-ucode
     julia
-    linux
+    linux-lts
     linux-firmware
     neovim
     networkmanager
