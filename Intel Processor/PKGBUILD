@@ -13,19 +13,17 @@ depends=(
     htop
     intel-ucode
     julia
-    libreoffice-fresh
     linux-lts 
     linux-firmware
+    mpv
     neovim
     openssh
     phototonic
     python-pip
-    reflector
     steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    vlc
     wl-clipboard
     yazi
 

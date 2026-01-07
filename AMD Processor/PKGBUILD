@@ -8,25 +8,32 @@ depends=(
     base
     base-devel
     efibootmgr
+    firefox
     foot
     git
     htop
     julia
     linux-lts
     linux-firmware
-    lvm2
+    mpv
     neovim
-    networkmanager
     openssh
     phototonic
     python-pip
-    reflector
+    steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    vlc
-    wl-clipboard
+    wl-clipboard    
     yazi
+
+    bluedevil
+    kscreen
+    plasma-desktop
+    plasma-nm
+    plasma-pa
+    sddm-kcm
+    spectacle
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
