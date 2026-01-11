@@ -19,11 +19,11 @@ depends=(
     neovim
     openssh
     phototonic
-    python-pip
     steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
+    uv
     wl-clipboard
     yazi
 
