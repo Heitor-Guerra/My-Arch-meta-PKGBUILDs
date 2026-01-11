@@ -1,39 +1,43 @@
 pkgname=my-arch-metapkg
 pkgver=1.0
 pkgrel=1
-pkgdesc="Meta-package for my Arch Linux setup. Intel CPU, lvm"
+pkgdesc="Meta-package for my Arch Linux setup. AMD CPU, lvm"
 arch=('any')
 depends=(
     base
     base-devel
     efibootmgr
-    firefox
     foot
     git
     htop
     intel-ucode
-    julia
-    linux-lts 
+    linux-lts
     linux-firmware
     mpv
     neovim
     openssh
     phototonic
-    steam
     ttf-liberation
     ttf-jetbrains-mono-nerd
     ufw
-    uv
-    wl-clipboard
+    wl-clipboard    
     yazi
 
+    cmake
+    gdb
+    julia
+    uv
+    valgrind
+
     bluedevil
+    firefox
     kscreen
     plasma-desktop
     plasma-nm
     plasma-pa
     sddm-kcm
     spectacle
+    steam
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
