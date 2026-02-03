@@ -24,6 +24,7 @@ depends=(
     yazi
 
     cmake
+    docker
     gdb
     julia
     uv
