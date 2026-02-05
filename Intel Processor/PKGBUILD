@@ -12,7 +12,7 @@ depends=(
     #Programming Languages
     jdk-openjdk 
     # Programming Tools
-    cmake docker docker-compose docker-buildx gdb uv valgrind
+    cmake docker docker-compose uv
     
     # CLI Programs for Basic Usage (Video, Editing, File management)
     7zip mpv neovim yazi 
