@@ -4,41 +4,24 @@ pkgrel=1
 pkgdesc="Meta-package for my Arch Linux setup. AMD CPU, lvm"
 arch=('any')
 depends=(
-    amd-ucode
-    base
-    base-devel
-    efibootmgr
-    foot
-    git
-    htop
-    linux-lts
-    linux-firmware
-    mpv
-    neovim
-    openssh
-    phototonic
-    ttf-liberation
-    ttf-jetbrains-mono-nerd
-    ufw
-    wl-clipboard    
-    yazi
+    # Basic Install Packages
+    linux-lts linux-firmware   amd-ucode base base-devel efibootmgr   wl-clipboard openssh git htop ufw foot
+    # Fonts
+    ttf-liberation ttf-jetbrains-mono-nerd
 
-    cmake
-    docker
-    gdb
-    julia
-    uv
-    valgrind
+    #Programming Languages
+    jdk-openjdk 
+    # Programming Tools
+    cmake docker docker-compose docker-buildx gdb uv valgrind
+    
+    # CLI Programs for Basic Usage (Video, Editing, File management)
+    7zip mpv neovim yazi 
+    # Other GUI Programs
+    firefox phototonic steam
+    
 
-    bluedevil
-    firefox
-    kscreen
-    plasma-desktop
-    plasma-nm
-    plasma-pa
-    sddm-kcm
-    spectacle
-    steam
+    # Desktop Environment Packages (KDE)
+    bluedevil kscreen plasma-desktop plasma-nm plasma-pa sddm-kcm spectacle
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
