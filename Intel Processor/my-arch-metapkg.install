@@ -54,10 +54,10 @@ post_install() {
     )
 
     # Localization
-    echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen;
+    echo "pt_BR.UTF-8 UTF-8" > /etc/locale.gen;
     locale-gen;
-    echo "LANG=pt_BR.UTF-8" >> /etc/locale.conf;
-
+    echo "LANG=pt_BR.UTF-8" > /etc/locale.conf;
+    echo "KEYMAP=br-abnt2" > /etc/vconsole.conf;
     ###############
 
     echo "Creating user";
@@ -83,12 +83,12 @@ post_install() {
     usermod -aG docker ${NAME};
 
     # UFW
-    systemctl enable --now ufw.service;
-    ufw default deny;
-    ufw allow from 192.168.0.0/24;
-    ufw allow Deluge;
-    ufw limit ssh;
-    ufw --force enable;
+    systemctl enable ufw.service;
+#    ufw default deny;
+#    ufw allow from 192.168.0.0/24;
+#    ufw allow Deluge;
+#    ufw limit ssh;
+#    ufw --force enable;
 
     # SDDM 
     systemctl enable sddm.service;
@@ -103,6 +103,7 @@ post_install() {
     echo "Extra config";
     
     # Defining a limit to journalctl
+    mkdir /etc/systemd/journald.conf.d
     echo "[Journal]" > /etc/systemd/journald.conf.d/50-meta.conf;
     echo "SystemMaxUse=50M" >> /etc/systemd/journald.conf.d/50-meta.conf;
     

@@ -3,6 +3,7 @@ pkgver=1.0
 pkgrel=1
 pkgdesc="Meta-package for my Arch Linux setup. AMD CPU, lvm"
 arch=('any')
+install="my-arch-metapkg.install"
 depends=(
     # Basic Install Packages
     linux-lts linux-firmware   amd-ucode base base-devel efibootmgr   wl-clipboard openssh git htop ufw foot
