@@ -1,16 +1,77 @@
+setup_bootloader() {
+    if [ ! -d /sys/firmware/efi/efivars ]; then
+        echo "System not booted in UEFI mode";
+        return 0;
+    fi
+
+    if [ -d "/boot/EFI" ] || [ -d "/boot/loader" ] || [ -d "/boot/grub" ]; then
+        echo "A bootloader appears to be already installed. Skipping.";
+        echo "If want to install it either way, please procede manually.";
+        return 0;
+    fi
+
+    ROOT_DEV=$(findmnt -n -o SOURCE /);
+    if [ -z "${ROOT_DEV}" ]; then
+        echo "Could not determine root device. Skipping boot entry creation."
+        return 1
+    fi
+
+    bootctl install;
+
+    if [ ! -d "/boot/loader/entries" ]; then
+        mkdir -p /boot/loader/entries;
+    fi
+
+    echo "default arch-lts.conf" > /boot/loader/loader.conf;
+    echo "timeout 0" >> /boot/loader/loader.conf;
+
+    if [ ! -f "/boot/loader/entries/arch-lts.conf" ]; then
+        echo "Creating entry";
+        echo "title Arch Linux LTS" > /boot/loader/entries/arch-lts.conf;
+        echo "linux /vmlinuz-linux-lts" >> /boot/loader/entries/arch-lts.conf;
+        echo "initrd /initramfs-linux-lts.img" >> /boot/loader/entries/arch-lts.conf;
+        echo "options root=${ROOT_DEV} rw" >> /boot/loader/entries/arch-lts.conf;
+    else
+        echo "Entry already exists";
+    fi
+
+    return 0;
+}
+
 post_install() {
     #### OBS: Only run after having set an root password with "passwd"
 
+    echo "System configuration"
+
+    # Defaults
+    NAME="Heitor-Guerra";
+    HOST="Computador-Heitor";
+    MIRRORS=(
+        "Server = https://mirror.ufscar.br/archlinux/\$repo/os/\$arch"
+        "Server = https://mirrors.ic.unicamp.br/archlinux/\$repo/os/\$arch"
+        "Server = https://br.mirrors.cicku.me/archlinux/\$repo/os/\$arch"
+        "Server = https://archlinux.c3sl.ufpr.br/\$repo/os/\$arch"
+    )
+
+    # Localization
+    echo "pt_BR.UTF-8 UTF-8" >> /etc/locale.gen;
+    locale-gen;
+    echo "LANG=pt_BR.UTF-8" >> /etc/locale.conf;
+
+    ###############
 
     echo "Creating user";
 
     # Create an user named Heitor-Guerra (Change accordingly)
-    # After the installation define a password for your user with "passwd Heitor-Guerra"
-    useradd -m -g users -G wheel Heitor-Guerra ;
+    # After the installation define a password for your user with "passwd Heitor-Guerra" 
+    if ! id -u ${NAME} &>/dev/null; then
+        useradd -m -g users -G wheel ${NAME} ;
+        echo ${HOST} > /etc/hostname;
+    fi
 
     echo "User created";
 
-    ###############
+    ##############
 
     echo "Enabling system services";
 
@@ -19,7 +80,7 @@ post_install() {
 
     # Docker
     systemctl enable docker.socket;
-    usermod -aG docker Heitor-Guerra; ####
+    usermod -aG docker ${NAME};
 
     # UFW
     systemctl enable --now ufw.service;
@@ -27,7 +88,7 @@ post_install() {
     ufw allow from 192.168.0.0/24;
     ufw allow Deluge;
     ufw limit ssh;
-    ufw enable;
+    ufw --force enable;
 
     # SDDM 
     systemctl enable sddm.service;
@@ -42,18 +103,18 @@ post_install() {
     echo "Extra config";
     
     # Defining a limit to journalctl
-    echo "SystemMaxUse=50M" > /etc/systemd/journald.conf;
-
+    echo "[Journal]" > /etc/systemd/journald.conf.d/50-meta.conf;
+    echo "SystemMaxUse=50M" >> /etc/systemd/journald.conf.d/50-meta.conf;
+    
     # Sudo config
     echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-wheel-group;
     chmod 440 /etc/sudoers.d/10-wheel-group;
 
     # Setting Pacman MirrorList
-    echo 'Server = https://mirror.ufscar.br/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
-    echo 'Server = https://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
-    echo 'Server = https://br.mirrors.cicku.me/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
-    echo 'Server = https://archlinux.c3sl.ufpr.br/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
+    printf "%s\n" "${MIRRORS[@]}" > /etc/pacman.d/mirrorlist;
 
+    # Installing Systemd-boot
+    setup_bootloader;
 
     echo "All Finished";
     echo "Things to manually do:";
