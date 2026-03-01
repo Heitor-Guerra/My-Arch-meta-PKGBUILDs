@@ -1,0 +1,62 @@
+post_install() {
+    #### OBS: Only run after having set an root password with "passwd"
+
+
+    echo "Creating user";
+
+    # Create an user named Heitor-Guerra (Change accordingly)
+    # After the installation define a password for your user with "passwd Heitor-Guerra"
+    useradd -m -g users -G wheel Heitor-Guerra ;
+
+    echo "User created";
+
+    ###############
+
+    echo "Enabling system services";
+
+    # NetworkManager
+    systemctl enable NetworkManager.service;
+
+    # Docker
+    systemctl enable docker.socket;
+    usermod -aG docker Heitor-Guerra; ####
+
+    # UFW
+    systemctl enable --now ufw.service;
+    ufw default deny;
+    ufw allow from 192.168.0.0/24;
+    ufw allow Deluge;
+    ufw limit ssh;
+    ufw enable;
+
+    # SDDM 
+    systemctl enable sddm.service;
+
+    # FSTRIM: For SSDs
+    systemctl enable fstrim.timer;
+    
+    echo "Services enabled";
+
+    #################
+
+    echo "Extra config";
+    
+    # Defining a limit to journalctl
+    echo "SystemMaxUse=50M" > /etc/systemd/journald.conf;
+
+    # Sudo config
+    echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-wheel-group;
+    chmod 440 /etc/sudoers.d/10-wheel-group;
+
+    # Setting Pacman MirrorList
+    echo 'Server = https://mirror.ufscar.br/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
+    echo 'Server = https://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
+    echo 'Server = https://br.mirrors.cicku.me/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
+    echo 'Server = https://archlinux.c3sl.ufpr.br/$repo/os/$arch' > /etc/pacman.d/mirrorlist;
+
+
+    echo "All Finished";
+    echo "Things to manually do:";
+    echo "Create a ssh key and link it (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)";
+    echo "Clone a .config folder";
+}

@@ -1,6 +1,7 @@
 # My Arch meta-PKGBUILDs
 Welcome to my meta-PKGBUILDs for the essentials on a fresh installation of arch
 
+OBS: It is needed to enable pacman's [multilib] repo
 OBS: They do NOT come with GPU-related packages. Make sure to install them later
 
 # Installation Guide:
