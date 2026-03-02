@@ -12,8 +12,8 @@ setup_bootloader() {
 
     ROOT_DEV=$(findmnt -n -o SOURCE /);
     if [ -z "${ROOT_DEV}" ]; then
-        echo "Could not determine root device. Skipping boot entry creation."
-        return 1
+        echo "Could not determine root device. Skipping boot entry creation.";
+        return 0;
     fi
 
     bootctl install;
@@ -30,7 +30,7 @@ setup_bootloader() {
         echo "title Arch Linux LTS" > /boot/loader/entries/arch-lts.conf;
         echo "linux /vmlinuz-linux-lts" >> /boot/loader/entries/arch-lts.conf;
         echo "initrd /initramfs-linux-lts.img" >> /boot/loader/entries/arch-lts.conf;
-        echo "options root=${ROOT_DEV} rw" >> /boot/loader/entries/arch-lts.conf;
+        echo "options root=${ROOT_DEV} rw quiet loglevel=3 systemd.show_status=auto rd.udev.log_level=3 libahci.ignore_sss=1" >> /boot/loader/entries/arch-lts.conf;
     else
         echo "Entry already exists";
     fi
