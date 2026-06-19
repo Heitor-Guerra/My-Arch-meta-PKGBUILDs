@@ -10,10 +10,8 @@ depends=(
     # Fonts
     ttf-liberation ttf-jetbrains-mono-nerd
 
-    #Programming Languages
-    jdk-openjdk 
     # Programming Tools
-    cmake docker maven uv
+    uv
     
     # CLI Programs for Basic Usage (Video, Editing, File management)
     7zip mpv neovim yazi 
