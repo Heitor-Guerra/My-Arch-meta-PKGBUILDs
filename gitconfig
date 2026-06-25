@@ -1,0 +1,14 @@
+[init]
+	defaultBranch = main
+[user]
+	email = heitor.guerra@proton.me
+	name = Heitor Guerra
+[core]
+	editor = nvim
+	pager = cat
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[alias]
+	addall = add .
+[pull]
+	rebase = false

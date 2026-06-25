@@ -1,0 +1,9 @@
+# By default, theme management is done using a plugin ( yatline.yazi )
+# https://github.com/imsi32/yatline.yazi/wiki
+
+
+#[flavor]
+#dark = "catppuccin-macchiato"
+
+#[flavor]
+#dark = "catppuccin-mocha"
