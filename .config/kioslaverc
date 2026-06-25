@@ -1,8 +1,0 @@
-ProxyUrlDisplayFlags=15
-
-[Proxy Settings]
-ProxyType=1
-ftpProxy=ftp://127.0.0.1 8888
-httpProxy=http://127.0.0.1 8888
-httpsProxy=http://127.0.0.1 8888
-socksProxy=socks://127.0.0.1 8888
