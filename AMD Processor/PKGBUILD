@@ -13,10 +13,10 @@ depends=(
     # Programming Tools
     uv
     
-    # CLI Programs for Basic Usage (Video, Editing, File management)
-    7zip mpv neovim yazi 
-    # Other GUI Programs
-    firefox phototonic steam
+    # Programs for Basic Usage (Editing, File management)
+    7zip neovim yazi 
+    # Other Programs
+    firefox
     
 
     # Desktop Environment Packages (KDE)

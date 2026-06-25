@@ -14,9 +14,9 @@ depends=(
     uv
     
     # CLI Programs for Basic Usage (Video, Editing, File management)
-    7zip mpv neovim yazi 
+    7zip neovim yazi 
     # Other GUI Programs
-    firefox phototonic steam
+    firefox
     
 
     # Desktop Environment Packages (KDE)

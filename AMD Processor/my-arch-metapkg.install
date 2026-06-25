@@ -79,8 +79,8 @@ post_install() {
     systemctl enable NetworkManager.service;
 
     # Docker
-    systemctl enable docker.socket;
-    usermod -aG docker ${NAME};
+    # systemctl enable docker.socket;
+    # usermod -aG docker ${NAME};
 
     # UFW
     systemctl enable ufw.service;
