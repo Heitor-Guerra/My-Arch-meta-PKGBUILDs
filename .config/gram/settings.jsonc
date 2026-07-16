@@ -1,0 +1,95 @@
+// Gram settings
+//
+// For information on how to configure Gram, see the Gram
+// documentation: gram://docs/configuring-gram
+//
+// To see all of Gram's default settings without changing your
+// custom settings, run `gram: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "node": {
+    "ignore_system_version": true,
+    "allow_prettier_download": false,
+    "allow_npm_install": true,
+    "allow_binary_download": true
+  },
+  "tab_bar": {
+    "show": true
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "status_bar": {
+    "active_language_button": false,
+    "active_file": false,
+    "show": true,
+    "cursor_position_button": false
+  },
+  "search": {
+    "button": false
+  },
+  "tab_size": 2,
+  "smooth_scroll": {
+    "enabled": true
+  },
+  "autosave": "on_window_change",
+  "ui_font_weight": 300.0,
+  "buffer_font_weight": 300.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "restore_on_startup": "last_session",
+  "when_closing_with_no_tabs": "close_window",
+  "lsp": {
+    "json-language-server": {
+      "binary": {
+        "enable_auto_updates": true,
+        "allow_binary_download": true
+      },
+      "enable_lsp_tasks": true
+    },
+    "basedpyright": {
+      "binary": {
+        "enable_auto_updates": true,
+        "allow_binary_download": true
+      },
+      "enable_lsp_tasks": true
+    },
+    "ruff": {
+      "binary": {
+        "enable_auto_updates": true,
+        "allow_binary_download": true
+      },
+      "enable_lsp_tasks": true
+    },
+    "clangd": {
+      "binary": {
+        "enable_auto_updates": true,
+        "allow_binary_download": true,
+        "arguments": [
+          "--query-driver=/usr/bin/g++",
+          "--background-index",
+          "--clang-tidy"
+        ]
+      }
+    }
+  },
+  "project_panel": {
+    "hide_hidden": true,
+    "hide_root": false,
+    "git_status": false,
+    "hide_gitignore": false,
+    "button": true,
+    "file_icons": true,
+    "folder_icons": true
+  },
+  "base_keymap": "Minimal",
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
+}
