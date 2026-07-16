@@ -14,7 +14,7 @@ depends=(
     uv
     
     # Programs for Basic Usage (Editing, File management)
-    7zip neovim yazi 
+    7zip neovim gram yazi 
     # Other Programs
     firefox
     

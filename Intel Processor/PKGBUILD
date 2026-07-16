@@ -14,7 +14,7 @@ depends=(
     uv
     
     # CLI Programs for Basic Usage (Video, Editing, File management)
-    7zip neovim yazi 
+    7zip neovim gram yazi 
     # Other GUI Programs
     firefox
     
