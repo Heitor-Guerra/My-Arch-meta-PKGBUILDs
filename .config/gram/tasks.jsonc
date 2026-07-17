@@ -1,0 +1,21 @@
+// Project tasks configuration. See gram://docs/tasks for documentation.
+//
+// Example:
+[
+  {
+      "label": "build cpp project",
+      "command": "make",
+  },
+  {
+      "label": "build cpp file",
+      "command": "g++",
+      "args": [
+          "-g", "-o", "${GRAM_DIRNAME}/main", "${GRAM_FILE}"
+      ]
+  },
+  {
+    "label": "run Python",
+    "command": "python",
+    "args": ["${GRAM_FILE}"]
+  },
+]

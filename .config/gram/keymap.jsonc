@@ -1,0 +1,33 @@
+// Gram keymap
+//
+// For information on binding keys, see the Gram
+// documentation: gram://docs/key-bindings
+//
+// To see the default key bindings run `gram: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-s": "workspace::Save"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift-s": "workspace::SaveAs"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-s": "workspace::SaveAll"
+    }
+  },
+  {
+    "context": "((Editor && jupyter) && !ContextEditor)",
+    "bindings": {
+      "shift-enter": "repl::Run"
+    }
+  }
+]

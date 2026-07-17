@@ -8,7 +8,6 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "node": {
-    "ignore_system_version": true,
     "allow_prettier_download": false,
     "allow_npm_install": true,
     "allow_binary_download": true
@@ -76,6 +75,7 @@
       }
     }
   },
+
   "project_panel": {
     "hide_hidden": true,
     "hide_root": false,
@@ -90,6 +90,6 @@
   "theme": {
     "mode": "dark",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
-  },
+    "dark": "Catppuccin Mocha"
+  }
 }
