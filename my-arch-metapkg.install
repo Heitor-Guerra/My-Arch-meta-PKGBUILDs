@@ -1,4 +1,5 @@
 setup_bootloader() {
+    pacman -S --noconfirm efibootmgr;
     if [ ! -d /sys/firmware/efi/efivars ]; then
         echo "System not booted in UEFI mode";
         return 0;
@@ -35,6 +36,7 @@ setup_bootloader() {
         echo "Entry already exists";
     fi
 
+    pacman -Rcdns --noconfirm efibootmgr
     return 0;
 }
 
@@ -79,8 +81,8 @@ post_install() {
     systemctl enable NetworkManager.service;
 
     # Docker
-    systemctl enable docker.socket;
-    usermod -aG docker ${NAME};
+    # systemctl enable docker.socket;
+    # usermod -aG docker ${NAME};
 
     # UFW
     systemctl enable ufw.service;
