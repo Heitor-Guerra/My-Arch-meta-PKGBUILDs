@@ -4,7 +4,7 @@
 	email = heitor.guerra@proton.me
 	name = Heitor Guerra
 [core]
-	editor = nvim
+	editor = nano
 	pager = cat
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/

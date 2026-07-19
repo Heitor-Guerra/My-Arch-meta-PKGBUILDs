@@ -9,14 +9,14 @@ prepend_preloaders = [
 prepend_previewers = [
     # Replace magick, image, video with mediainfo
 
-    { url = "*.md", run = "nvim" },
+    { url = "*.md", run = "nano" },
 ]
 
 [opener]
 edit = [
-  { run = 'nvim "$@"', block = true },
+  { run = 'nano "$@"', block = true },
 ]
 
-play = [
-  { run = 'mpv "$@"', orphan = true, for = "unix"},
-]
+#play = [
+#  { run = 'mpv "$@"', orphan = true, for = "unix"},
+#]

@@ -2,8 +2,8 @@
 # ~/.bashrc
 #
 
-export EDITOR="nvim"
-export SUDO_EDITOR="nvim"
+export EDITOR="nano"
+export SUDO_EDITOR="nano"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
