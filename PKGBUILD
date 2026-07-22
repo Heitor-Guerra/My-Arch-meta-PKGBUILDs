@@ -6,20 +6,13 @@ arch=('any')
 install="my-arch-metapkg.install"
 depends=(
     # Basic Install Packages
-    linux-lts linux-firmware   base base-devel   openssh htop ufw foot
-    # Fonts
-    ttf-liberation ttf-jetbrains-mono-nerd
+    linux-lts linux-firmware   base base-devel   openssh ufw foot
 
-    # Programming Tools
-    uv
-
-    # Efibootmgr needed to setup bootloader (in post_install script)
-    
     # Other Programs
-    7zip nano gram yazi firefox
+    7zip nano gram uv yazi firefox
     
     # Desktop Environment Packages (KDE)
-    bluedevil plasma-desktop plasma-nm plasma-pa sddm-kcm spectacle
+    plasma-desktop plasma-nm plasma-pa sddm-kcm spectacle
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')

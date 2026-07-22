@@ -9,7 +9,7 @@ OBS: They do NOT come with GPU-related packages. Make sure to install them later
 
 Download the package using curl
 
-    curl -LO https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/<CPU>/my-arch-metapkg-1.0-1-any.pkg.tar.zst
+    curl -LO https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/1.0/my-arch-metapkg-1.0-1-any.pkg.tar.zst
 
 Install it with pacman -U:
 
@@ -17,13 +17,4 @@ Install it with pacman -U:
 
 Or just use pacman -U with curl(Direct Install)
 
-    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/<CPU>/my-arch-metapkg-1.0-1-any.pkg.tar.zst
-
-## Examples:
-AMD CPU:
-
-    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/AMD/my-arch-metapkg-1.0-1-any.pkg.tar.zst
-    
-Intel CPU:
-
-    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/Intel/my-arch-metapkg-1.0-1-any.pkg.tar.zst
+    pacman -U https://github.com/Heitor-Guerra/My-Arch-meta-PKGBUILDs/releases/download/1.0/my-arch-metapkg-1.0-1-any.pkg.tar.zst
