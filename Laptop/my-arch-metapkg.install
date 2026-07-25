@@ -97,6 +97,9 @@ post_install() {
 
     # FSTRIM: For SSDs
     systemctl enable fstrim.timer;
+
+    # Powertop
+    systemctl enable powertop.service;
     
     echo "Services enabled";
 
