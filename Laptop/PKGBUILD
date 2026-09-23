@@ -9,13 +9,13 @@ depends=(
     linux-lts linux-firmware   base base-devel   openssh ufw foot
 
     # Other Programs
-    7zip nano gram uv yazi firefox
+    7zip nano gram yazi firefox
     
     # Desktop Environment Packages (KDE)
     plasma-desktop plasma-nm plasma-pa sddm-kcm spectacle
 
     # Laptop Packages
-    powertop power-profiles-daemon bluedevil
+    powertop power-profiles-daemon
 )
 url="https://github.com/Heitor-Guerra"
 license=('GPL')
