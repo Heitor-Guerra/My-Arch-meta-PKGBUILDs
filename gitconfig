@@ -5,7 +5,7 @@
 	name = Heitor Guerra
 [core]
 	editor = nano
-	pager = cat
+	pager = more
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [alias]

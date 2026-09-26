@@ -12,10 +12,5 @@
       "args": [
           "-g", "-o", "${GRAM_DIRNAME}/main", "${GRAM_FILE}"
       ]
-  },
-  {
-    "label": "run Python",
-    "command": "python",
-    "args": ["${GRAM_FILE}"]
-  },
+  }
 ]

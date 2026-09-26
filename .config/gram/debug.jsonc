@@ -4,13 +4,6 @@
 // see: gram://docs/debugger
 [
   {
-    "adapter": "Debugpy",
-    "label": "Python: Debug",
-    "request": "launch",
-    "cwd": "$GRAM_WORKTREE_ROOT",
-    "program": "$GRAM_FILE"
-  },
-  {
     "adapter": "CodeLLDB",
     "label": "C/C++: Debug File",
     "request": "launch",

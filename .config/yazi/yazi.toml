@@ -9,12 +9,13 @@ prepend_preloaders = [
 prepend_previewers = [
     # Replace magick, image, video with mediainfo
 
-    { url = "*.md", run = "nano" },
+    # { url = "*.md", run = "nano" },
 ]
 
 [opener]
 edit = [
-  { run = 'nano "$@"', block = true },
+  #{ run = 'nano "$@"', block = true },
+  { run = 'nano -- %s', block = true }
 ]
 
 #play = [

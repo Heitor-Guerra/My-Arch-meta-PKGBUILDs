@@ -1,11 +1,11 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "1db18bb"
-hash = "eff8ff12fa4e5f035a10d8aeeb4c258d"
+rev = "c591a36"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "1db18bb"
+rev = "c591a36"
 hash = "187cc58ba7ac3befd49c342129e6f1b6"
 
 [[plugin.deps]]
@@ -15,8 +15,8 @@ hash = "68603fdd1dcaf415227e2c77a9317947"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "a837101"
-hash = "635b0feb9215772d22020eb0abf0bb34"
+rev = "ea92cf4"
+hash = "9776f378459072b6c2875eae5addc49d"
 
 [[plugin.deps]]
 use = "imsi32/yatline"

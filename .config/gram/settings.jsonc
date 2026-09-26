@@ -8,9 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "node": {
+    "ignore_system_version": false,
     "allow_prettier_download": false,
-    "allow_npm_install": true,
-    "allow_binary_download": true
+    "allow_npm_install": false,
+    "allow_binary_download": false
   },
   "tab_bar": {
     "show": true
@@ -42,27 +43,6 @@
   "restore_on_startup": "last_session",
   "when_closing_with_no_tabs": "close_window",
   "lsp": {
-    "json-language-server": {
-      "binary": {
-        "enable_auto_updates": true,
-        "allow_binary_download": true
-      },
-      "enable_lsp_tasks": true
-    },
-    "basedpyright": {
-      "binary": {
-        "enable_auto_updates": true,
-        "allow_binary_download": true
-      },
-      "enable_lsp_tasks": true
-    },
-    "ruff": {
-      "binary": {
-        "enable_auto_updates": true,
-        "allow_binary_download": true
-      },
-      "enable_lsp_tasks": true
-    },
     "clangd": {
       "binary": {
         "enable_auto_updates": true,

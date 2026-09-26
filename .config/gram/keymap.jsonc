@@ -29,5 +29,52 @@
     "bindings": {
       "shift-enter": "repl::Run"
     }
+  },
+  {
+    "bindings": {
+      "ctrl-/": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-f": "pane::DeploySearch"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-f": null
+    }
+  },
+  {
+    "bindings": {
+      "alt-down": "editor::AddSelectionBelow"
+    }
+  },
+  {
+    "bindings": {
+      "alt-up": "editor::AddSelectionAbove"
+    }
+  },
+  {
+    "bindings": {
+      "alt-j": "editor::SelectPrevious"
+    }
+  },
+  {
+    "bindings": {
+      "alt-k": "editor::SelectNext"
+    }
+  },
+  {
+    "bindings": {
+      "alt-l": "editor::SelectAllMatches"
+    }
   }
 ]
