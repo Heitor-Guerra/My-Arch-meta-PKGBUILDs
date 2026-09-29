@@ -76,5 +76,10 @@
     "bindings": {
       "alt-l": "editor::SelectAllMatches"
     }
+  },
+  {
+    "bindings": {
+      "f2": "task::Spawn"
+    }
   }
 ]

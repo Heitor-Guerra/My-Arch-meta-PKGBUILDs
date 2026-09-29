@@ -12,5 +12,10 @@
       "args": [
           "-g", "-o", "${GRAM_DIRNAME}/main", "${GRAM_FILE}"
       ]
-  }
+  },
+  {
+      "label": "run lua file",
+      "command": "lua",
+      "args": ["${GRAM_FILE}"]
+  },
 ]

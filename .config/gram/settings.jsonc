@@ -43,6 +43,13 @@
   "restore_on_startup": "last_session",
   "when_closing_with_no_tabs": "close_window",
   "lsp": {
+    "lua-language-server": {
+      "binary": {
+        "enable_auto_updates": true,
+        "allow_binary_download": true
+      },
+      "enable_lsp_tasks": true
+    },
     "clangd": {
       "binary": {
         "enable_auto_updates": true,
