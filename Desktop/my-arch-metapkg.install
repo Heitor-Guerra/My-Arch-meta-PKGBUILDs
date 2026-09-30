@@ -45,6 +45,9 @@ post_install() {
 
     echo "System configuration"
 
+    echo "OBS: Sudo configuration is removed due to security concerns."
+    echo "If wanted, please configure it manually. Commands are in the .install file."
+
     # Defaults
     NAME="Heitor-Guerra";
     HOST="Computador-Heitor";
@@ -67,7 +70,9 @@ post_install() {
     # Create an user named Heitor-Guerra (Change accordingly)
     # After the installation define a password for your user with "passwd Heitor-Guerra" 
     if ! id -u ${NAME} &>/dev/null; then
-        useradd -m -g users -G wheel ${NAME} ;
+
+    #   useradd -m -g users -G wheel ${NAME};  ############# Sudo Config
+
         echo ${HOST} > /etc/hostname;
     fi
 
@@ -110,8 +115,8 @@ post_install() {
     echo "SystemMaxUse=50M" >> /etc/systemd/journald.conf.d/50-meta.conf;
     
     # Sudo config
-    echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-wheel-group;
-    chmod 440 /etc/sudoers.d/10-wheel-group;
+    # echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-wheel-group;
+    # chmod 440 /etc/sudoers.d/10-wheel-group;
 
     # Setting Pacman MirrorList
     printf "%s\n" "${MIRRORS[@]}" > /etc/pacman.d/mirrorlist;
