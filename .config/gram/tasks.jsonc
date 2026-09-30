@@ -3,17 +3,6 @@
 // Example:
 [
   {
-      "label": "build cpp project",
-      "command": "make",
-  },
-  {
-      "label": "build cpp file",
-      "command": "g++",
-      "args": [
-          "-g", "-o", "${GRAM_DIRNAME}/main", "${GRAM_FILE}"
-      ]
-  },
-  {
       "label": "run lua file",
       "command": "lua",
       "args": ["${GRAM_FILE}"]

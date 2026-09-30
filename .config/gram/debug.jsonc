@@ -2,20 +2,4 @@
 //
 // For more documentation on how to configure debug tasks,
 // see: gram://docs/debugger
-[
-  {
-    "adapter": "CodeLLDB",
-    "label": "C/C++: Debug File",
-    "request": "launch",
-    "build": "build cpp file",
-    "program": "${GRAM_DIRNAME}/main"
-  },
-  {
-    "adapter": "CodeLLDB",
-    "label": "C/C++: Debug Project",
-    "request": "launch",
-    "cwd": "$GRAM_WORKTREE_ROOT",
-    "build": "build cpp project",
-    "program": "${GRAM_DIRNAME}/build/main"
-  }
-]
+[]

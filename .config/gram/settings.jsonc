@@ -50,17 +50,6 @@
       },
       "enable_lsp_tasks": true
     },
-    "clangd": {
-      "binary": {
-        "enable_auto_updates": true,
-        "allow_binary_download": true,
-        "arguments": [
-          "--query-driver=/usr/bin/g++",
-          "--background-index",
-          "--clang-tidy"
-        ]
-      }
-    }
   },
 
   "project_panel": {
