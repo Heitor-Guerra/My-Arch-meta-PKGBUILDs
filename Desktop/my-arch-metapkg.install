@@ -45,6 +45,9 @@ post_install() {
 
     echo "System configuration"
 
+    echo "OBS: Sudo configuration is removed due to security concerns."
+    echo "If wanted, please configure it manually. Commands are in the .install file."
+
     # Defaults
     NAME="Heitor-Guerra";
     HOST="Computador-Heitor";
@@ -60,14 +63,15 @@ post_install() {
     locale-gen;
     echo "LANG=pt_BR.UTF-8" > /etc/locale.conf;
     echo "KEYMAP=br-abnt2" > /etc/vconsole.conf;
+
     ###############
 
     echo "Creating user";
 
     # Create an user named Heitor-Guerra (Change accordingly)
-    # After the installation define a password for your user with "passwd Heitor-Guerra" 
+    # After the installation define a password for your user with "passwd Heitor-Guerra"
     if ! id -u ${NAME} &>/dev/null; then
-        useradd -m -g users -G wheel ${NAME} ;
+        useradd -m -g users ${NAME} ;
         echo ${HOST} > /etc/hostname;
     fi
 
@@ -80,38 +84,30 @@ post_install() {
     # NetworkManager
     systemctl enable NetworkManager.service;
 
-    # Docker
-    # systemctl enable docker.socket;
-    # usermod -aG docker ${NAME};
-
     # UFW
     systemctl enable ufw.service;
-#    ufw default deny;
-#    ufw allow from 192.168.0.0/24;
-#    ufw allow Deluge;
-#    ufw limit ssh;
-#    ufw --force enable;
+    ufw default deny;
+    ufw allow from 192.168.0.0/24;
+    ufw allow Deluge;
+    ufw limit ssh;
+    ufw --force enable;
 
-    # SDDM 
+    # SDDM
     systemctl enable sddm.service;
 
     # FSTRIM: For SSDs
     systemctl enable fstrim.timer;
-    
+
     echo "Services enabled";
 
     #################
 
     echo "Extra config";
-    
+
     # Defining a limit to journalctl
     mkdir /etc/systemd/journald.conf.d
     echo "[Journal]" > /etc/systemd/journald.conf.d/50-meta.conf;
     echo "SystemMaxUse=50M" >> /etc/systemd/journald.conf.d/50-meta.conf;
-    
-    # Sudo config
-    echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-wheel-group;
-    chmod 440 /etc/sudoers.d/10-wheel-group;
 
     # Setting Pacman MirrorList
     printf "%s\n" "${MIRRORS[@]}" > /etc/pacman.d/mirrorlist;
